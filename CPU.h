@@ -25,7 +25,7 @@ class CPU {
     // Fill the input buffer with random values so they can't cheat and exploit
     // the zeroes that would otherwise be here (e.g. 0^2 is just 0)
     for (int i = 0; i < 4; i++) {
-      state.last_inputs[i] = sgpl::tlrand.Get().GetDouble();
+      state.last_inputs[i] = sgpl::tlrand.Get().GetUInt();
     }
   }
 

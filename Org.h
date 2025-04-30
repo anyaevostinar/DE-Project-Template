@@ -25,14 +25,13 @@ public:
    * Attempt to produce a child organism, if this organism has enough points.
    */
   std::optional<Organism> CheckReproduction() {
-    if (GetPoints() > 20) {
-      Organism offspring = *this;
-      offspring.Reset();
-      offspring.Mutate();
-      AddPoints(-20);
-      return offspring;
-    }
-    return {};
+    
+    Organism offspring = *this;
+    offspring.Reset();
+    offspring.Mutate();
+    AddPoints(-20);
+    return offspring;
+
   }
 
   void Process(emp::WorldPosition current_location) {
