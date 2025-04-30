@@ -22,14 +22,13 @@ public:
   void Mutate() { cpu.Mutate(); }
 
   /**
-   * Attempt to produce a child organism, if this organism has enough points.
+   * Attempt to produce a child organism.
    */
   std::optional<Organism> CheckReproduction() {
     
     Organism offspring = *this;
     offspring.Reset();
     offspring.Mutate();
-    AddPoints(-20);
     return offspring;
 
   }
